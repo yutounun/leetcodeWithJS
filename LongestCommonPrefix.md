@@ -1,3 +1,5 @@
+https://leetcode.com/problems/longest-common-prefix/
+
 The thing is with js we can sort strings and when we sort an array of different strings they will be sorted alphabetically, which means all we left to do is find the common part between the first and the last values in the sorted array. As simple as this:
 
 ```javascript
