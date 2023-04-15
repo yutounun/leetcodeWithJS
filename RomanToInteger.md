@@ -1,28 +1,30 @@
 https://leetcode.com/problems/roman-to-integer/
+2nd time
+
+Easiest and understandable answer.
+If the current numeral is less than the next one, subtract the current one from value.
+Instead, in the next step, you can add the big number just normally.
 
 ```javascript
-const romanToInt = function (s) {
-  set = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
-    D: 500,
-    M: 1000,
-  };
+symbols = {
+  I: 1,
+  V: 5,
+  X: 10,
+  L: 50,
+  C: 100,
+  D: 500,
+  M: 1000,
+};
 
-  s = s.replace("IV", "IIII").replace("IX", "VIIII");
-  s = s.replace("CD", "CCCC").replace("CM", "DCCCC");
-  s = s.replace("XL", "XXXX").replace("XC", "LXXXX");
-
-  console.log(s);
-
-  const str = s.split("");
-  let rtn = 0;
-  str.forEach((s) => {
-    rtn += set[s];
-  });
-  return rtn;
+var romanToInt = function (s) {
+  value = 0;
+  for (let i = 0; i < s.length; i += 1) {
+    const current = s[i];
+    const next = s[i + 1];
+    symbols[current] < symbols[next]
+      ? (value -= symbols[current])
+      : (value += symbols[current]);
+  }
+  return value;
 };
 ```
