@@ -1,27 +1,30 @@
 https://leetcode.com/problems/valid-parentheses/
 
+second time
+
 ```javascript
 var isValid = function (s) {
+  // ()→true
+  // (]→false
+  // ([])→false
+  // ()[]→true
+
   const stack = [];
 
-  for (let i = 0; i < s.length; i++) {
-    console.log("stack: ", stack);
-    let c = s.charAt(i);
-    console.log("c", c);
-    switch (c) {
+  // iterate s
+  for (const i of s) {
+    switch (i) {
       case "(":
         stack.push(")");
-        break;
-      case "[":
-        stack.push("]");
         break;
       case "{":
         stack.push("}");
         break;
-      // else
+      case "[":
+        stack.push("]");
+        break;
       default:
-        console.log("stack2 :", stack);
-        if (c !== stack.pop()) {
+        if (stack.pop() !== i) {
           return false;
         }
     }
