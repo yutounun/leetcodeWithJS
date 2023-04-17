@@ -59,3 +59,30 @@ console.log(rtn); // "xam"
 - Big O of N
 - Big O of N squared
 - Big O of M times N
+
+## IndexOf
+
+The following code returns the first index of haystack starting to include needle value
+
+```javascript
+const haystack = "hello";
+const need = "he";
+return haystack.indexOf(needle); // 0
+```
+
+## Dynamic Programing
+
+This saves data to avoid calculating multiple times.
+The fibonacci sequence (Emerged on Climbing Stairs problem) is the representative example of using this.
+
+## Sort numbers including negative number
+
+```javascript
+nums1.sort((a, b) => {
+  return a - b;
+});
+```
+
+## Tree Structure
+
+Use recursive function
