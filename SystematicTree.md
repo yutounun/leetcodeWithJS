@@ -18,7 +18,9 @@ var isSymmetric = function (root) {
   return checkTree(root.right, root.left);
 };
 function checkTree(rightNode, leftNode) {
+  // In case of both of two nodes are null
   if (!rightNode && !leftNode) return true;
+
   // In case of one of two nodes is null
   if (!rightNode || !leftNode) return false;
 
