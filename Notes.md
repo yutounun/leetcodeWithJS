@@ -54,11 +54,27 @@ const rtn = example.substr(1, 3);
 console.log(rtn); // "xam"
 ```
 
-## Big O
+## How to read Big O
 
 - Big O of N
 - Big O of N squared
 - Big O of M times N
+
+## Time complexity
+
+### O(N)
+
+Visits each node in the tree exactly once.
+
+## Space Complexity
+
+### (O(1))
+
+The algorithm uses a fixed amount of memory, regardless of the input size. For example, simple mathematical operations like addition or subtraction have constant space complexity.
+
+### (O(n))
+
+The memory usage of the algorithm is directly proportional to the size of the input. For example, the space complexity of an algorithm that creates a copy of an input array would be O(n), where n is the number of elements in the array.
 
 ## IndexOf
 
