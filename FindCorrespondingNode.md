@@ -1,6 +1,8 @@
 1st time
 level: 6
 
+solved without any advice
+
 ```javascript
 /**
  * Definition for a binary tree node.
