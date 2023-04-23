@@ -1,6 +1,7 @@
 https://leetcode.com/problems/valid-palindrome/description/
 
 1. First attempt → Failure
+2. second attempt → Failure
 
 ```javascript
 /**
@@ -73,5 +74,26 @@ var isPalindrome = function (str) {
     left++;
   }
   return true;
+};
+```
+
+4th
+
+```javascript
+var isPalindrome = function (str) {
+  let word = "";
+  chars = "abcdefghijklnmopqrstuvqxyz1234567890";
+  for (let i = 0; i < str.length; i++) {
+    // convert string to small letters
+    lowStr = str[i].toLowerCase();
+    // remove symbols and spaces
+    if (chars.includes(lowStr)) {
+      word += lowStr;
+    }
+  }
+  // reverse new value
+  const reversedS = word.split("").reverse().join("");
+  // compate two values
+  return reversedS === word;
 };
 ```

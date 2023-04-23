@@ -2,22 +2,21 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 
 ```javascript
 const maxProfit = (prices) => {
-  let left = 0; // Buy
-  let right = 1; // sell
-  let max_profit = 0;
+  // initialize min and maxProfit
+  // iterate a given array
+  // update min and maxProfit if neccesary
 
-  while (right < prices.length) {
-    // In case you can gain any profit.
-    if (prices[left] < prices[right]) {
-      let profit = prices[right] - prices[left]; // our current profit
-
-      max_profit = Math.max(max_profit, profit);
-    } else {
-      // If you cannot gain any profit.
-      left = right;
+  let min = Infinity;
+  let maxProfit = 0;
+  for (const price of prices) {
+    if (price < min) {
+      min = price;
     }
-    right++;
+    const sub = price - min;
+    if (sub > maxProfit) {
+      maxProfit = sub;
+    }
   }
-  return max_profit;
+  return maxProfit;
 };
 ```
