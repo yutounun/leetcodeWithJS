@@ -1,4 +1,6 @@
 https://leetcode.com/problems/linked-list-cycle/description/
+2nd time
+level: 4
 
 ```javascript
 /**

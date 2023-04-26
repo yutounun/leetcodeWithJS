@@ -13,6 +13,13 @@ const myMap = new Map([
   ["key3", "value3"],
 ]);
 
+// find some obj
+for (const [key, value] of hashArr.entries()) {
+  if (value === 1) {
+    return key;
+  }
+}
+
 // Accessing values
 console.log(myMap.get("key1")); // 'value1'
 

@@ -1,4 +1,6 @@
 This runs out of time :( → Failure!!
+2nd time → failed
+level: 6
 
 ```javascript
 // 1. Create an empty stack
@@ -43,6 +45,30 @@ function singleNumber(nums) {
   // Iterate only keys by using let ... in
   for (let num in map) {
     if (map[num] === 1) return Number(num);
+  }
+}
+```
+
+```javascript
+function singleNumber(nums) {
+  // make a hashmap
+  // iterate nums array
+  // inside of the loop, push {el: Ntimes} to hashmap
+  // return get(0)
+  const hashArr = new Map();
+  for (const num of nums) {
+    if (hashArr.has(num)) {
+      let val = hashArr.get(num);
+      hashArr.set(num, val + 1); // Update the value in hashArr
+    } else {
+      hashArr.set(num, 1);
+    }
+  }
+
+  for (const [key, value] of hashArr.entries()) {
+    if (value === 1) {
+      return key;
+    }
   }
 }
 ```
